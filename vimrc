@@ -30,12 +30,17 @@ set backspace=indent,eol,start
 "else
 "  set backup		" keep a backup file
 "endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set showmatch		" show matching braces
-set incsearch		" do incremental searching
-set ic			" case insensitive
+set history=50    	" keep 50 lines of command line history
+set ruler         	" show the cursor position all the time
+set showcmd       	" display incomplete commands
+set showmatch	  	" show matching braces
+set incsearch	  	" do incremental searching
+set ignorecase    	" case insensitive
+set smartcase     	" override ignore case if search pattern contains upper case
+set shiftwidth=2  	" indents by 2 spaces instead of 8 set by tabstop
+set autoindent    	" indent automatically
+
+let fortran_do_enddo=1	" indent for fortran do/enddo
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -54,7 +59,7 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-filetype plugin on
+filetype plugin indent on
 
 if &term=="xterm"
      set t_Co=8
