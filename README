@@ -1,0 +1,8 @@
+Usage: 
+  git clone https://github.com/vinodkl81/vimrc.git
+  mv vimrc $HOME/.vim 
+  cd $HOME/.vim 
+  submodule init && submodule update 
+  cd $HOME 
+  ln -s .vim/vimrc .vimrc 
+  ln -s .vim/gvimrc .gvimrc
